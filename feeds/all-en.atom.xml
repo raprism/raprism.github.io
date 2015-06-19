@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>:: RaPrism ::</title><link href="https://raprism.github.io/" rel="alternate"></link><link href="https://raprism.github.io/feeds/all-en.atom.xml" rel="self"></link><id>https://raprism.github.io/</id><updated>2015-06-19T00:00:00+02:00</updated><entry><title>PyData Berlin 2015</title><link href="https://raprism.github.io/PyDataBerlin2015.html" rel="alternate"></link><updated>2015-06-19T00:00:00+02:00</updated><author><name>prismv</name></author><id>tag:raprism.github.io,2015-06-18:PyDataBerlin2015.html</id><summary type="html">&lt;p&gt;After a visit of &lt;a href="http://pydata.org/berlin2015"&gt;PyData Berlin 2015&lt;/a&gt;
+event, which took place 29.-30. May at location
+&lt;a href="http://www.betahaus.com"&gt;Betahaus&lt;/a&gt;, I wrote down some links as a
+reminder, and decided then to put them here alongside with some
+thoughts on given topics.&lt;/p&gt;
+&lt;p&gt;Actually there were talks as given on meeting site - 'related to the
+use of Python in data management and analysis' - from variety of
+fields, but with emphasis on application of machine learning.&lt;/p&gt;
+&lt;p&gt;In 2014 PyData Berlin event was a &lt;a href="https://www.youtube.com/watch?v=d9Qm3PPoYNQ"&gt;talk of Travis
+Oliphant&lt;/a&gt; , during which
+also 'PyData: the First 20 Years' were summarized on a slide. Actually
+this story began with basic matrix calculation packages that were
+precursor of current standard &lt;a href="http://www.numpy.org"&gt;NumPy&lt;/a&gt; and
+extensions like &lt;a href="https://www.scipy.org"&gt;SciPy&lt;/a&gt; and
+&lt;a href="http://matplotlib.org"&gt;matplotlib&lt;/a&gt;. With
+&lt;a href="http://pandas.pydata.org"&gt;pandas&lt;/a&gt; and several machine learning
+packages, e.g. &lt;a href="http://scikit-learn.org"&gt;scikit-learn&lt;/a&gt;, the PyData
+ecosystem rivals &lt;a href="http://www.r-project.org"&gt;R&lt;/a&gt; and interacts with
+'big' Java-driven 'big data' solutions centered on
+&lt;a href="https://projects.apache.org/indexes/category.html#big-data"&gt;apache.org&lt;/a&gt; -
+as described
+e.g. &lt;a href="http://www.blue-yonder.com/blog-e/2014/11/12/environment-choose-data-science"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Topics presented and discussed in Berlin this year were commented in
+'official'
+&lt;a href="https://twitter.com/hashtag/PyDataBerlin?src=hash"&gt;#PyDataBerlin&lt;/a&gt;
+twitter feeds, and &lt;a href="https://www.youtube.com/user/PyDataTV"&gt;videos&lt;/a&gt; are
+on-line.&lt;/p&gt;
+&lt;p&gt;The keynote from &lt;a href="http://matthewrocklin.com"&gt;Matthew
+Rocklin&lt;/a&gt; from &lt;a href="http://continuum.io"&gt;Continuum
+Analytics&lt;/a&gt; was about
+&lt;a href="http://dask.pydata.org/"&gt;Dask&lt;/a&gt;, which seems to be a quite elegant
+approach to get 'instantly' multi-core performance for a large subset
+of NumPy functionality by parallel processing. This topic leads
+usually to hints about limitations for multi-threaded data management
+because of &lt;a href="https://wiki.python.org/moin/GlobalInterpreterLock"&gt;GIL&lt;/a&gt;,
+and consequently one of Matthew's message was to get rid of this in
+main parts of PyData module ecosystem (&lt;a href="http://docs.cython.org/src/userguide/external_C_code.html#nogil"&gt;with
+nogil&lt;/a&gt;
+statement in cython).&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://haenel.co"&gt;Valentin Haenel&lt;/a&gt; talked about Blosc and related
+higher-level packages (see links on his homepage). Especially the
+'columnar data container' &lt;a href="https://github.com/Blosc/bcolz"&gt;bcolz&lt;/a&gt; could
+be considered as an light-weight alternative for HDF5 file format (actually
+&lt;a href="http://www.pytables.org"&gt;PyTables&lt;/a&gt; offers also Blosc-based
+compression filter).&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/c-abird"&gt;Claas Abert&lt;/a&gt;'s talk about numerical
+treatment of PDE with Numpy gave impresison about one 'classic' use
+case for PyData packages, i.e. physical simulations by
+finite-difference and finite-elements methods of &lt;a href="http://micromagnetics.org"&gt;micromagnetic
+problems&lt;/a&gt;. The finite-elements package is
+based on &lt;a href="http://fenicsproject.org/"&gt;FEnICS&lt;/a&gt;. Number crunching
+involves also optimization of Python code, and an overview on
+possibilities was given. Thanks for getting a hint about new JIT
+compiler: &lt;a href="https://github.com/cosmo-ethz/hope"&gt;HOPE&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Mobile app marketing was one example of 'new' 'Big Data' and their
+challenges. Nakul Selvaraj from &lt;a href="http://www.trademob.com"&gt;Trademob&lt;/a&gt;
+explained demands for real-time monitoring, and his colleague Tobias
+Kuhn gave some insights about statistical methods with specific
+algorithms like &lt;a href="https://github.com/trademob/t-digest"&gt;t-digest&lt;/a&gt; used
+e.g.  for tracking of anomalies, or how to decompose trends on top of
+seasonal variations.&lt;/p&gt;
+&lt;p&gt;There were 2 talks from &lt;a href="https://pivotal.io"&gt;Pivotal&lt;/a&gt; folks. &lt;a href="http://cloudfoundry.org"&gt;Cloud
+Foundry&lt;/a&gt; was mentioned as their
+&lt;a href="https://en.wikipedia.org/wiki/Platform_as_a_service"&gt;PaaS&lt;/a&gt; product,
+and it's interesting to see what open source is &lt;a href="https://pivotal.io/open-source"&gt;used
+@Pivotal&lt;/a&gt;. Here smart GPS tracking of
+cars was given as one example of
+&lt;a href="https://en.wikipedia.org/wiki/Internet_of_Things"&gt;IoT&lt;/a&gt;. In this study
+presented by Ronert Obst &lt;a href="http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm"&gt;Random
+Forests&lt;/a&gt;
+were used to learn and classify possible driven routes. Although
+&lt;a href="https://github.com/apache/spark"&gt;Spark&lt;/a&gt; usage was mentioned here and
+in other talks, it was also hinted to
+&lt;a href="https://github.com/apache/flink"&gt;Flink&lt;/a&gt; as alternative with different
+memory model and ability to process data
+&lt;a href="http://ci.apache.org/projects/flink/flink-docs-master/api/java/org/apache/flink/languagebinding/api/java/python/streaming/PythonStreamer.html"&gt;streams&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;On Friday the presentation session ended with 'Get Together', but one
+should not forget to mention the (en)lightning talks just before. I
+pick two: Matthew Rocklin gave short example to show what the benefit
+of &lt;a href="http://pandas.pydata.org/pandas-docs/dev/categorical.html#categorical"&gt;pandas' dtype
+category&lt;/a&gt;
+is. And the presentation from &lt;a href="http://tdj.si"&gt;Tadej Štajner&lt;/a&gt; about
+&lt;a href="http://tdj.si/automl_pydataberlin.pdf"&gt;automatic machine learning&lt;/a&gt;
+with some &lt;a href="https://github.com/tadejs/autokit"&gt;code&lt;/a&gt;.  So how different
+will be future PyData events, if one takes one statement on
+&lt;a href="http://automl.org"&gt;AutoML&lt;/a&gt; site too serious: 'taking the human expert
+out of the loop'?&lt;/p&gt;
+&lt;p&gt;It was not only a presentation about how &lt;a href="https://www.ascribe.io"&gt;ascribe&lt;/a&gt;
+uses Python modules, like
+&lt;a href="https://github.com/ascribe/transactions"&gt;transactions&lt;/a&gt; as 'Bitcoin
+for Humans', but in his keynote Trent McConaghy also gave an
+interesting view on how blockchains and a suitable protocol
+(&lt;a href="https://github.com/ascribe/spool"&gt;Spool&lt;/a&gt;) under the hood can help
+e.g. artists to keep in control of intellectual property of digital
+objects.&lt;/p&gt;
+&lt;p&gt;The keynote of Felix Wick from &lt;a href="http://www.blue-yonder.com"&gt;Blue
+Yonder&lt;/a&gt; contained really lots of
+information not only about technical stuff a data scientist might or
+should know, when doing e.g &lt;a href="http://www.gartner.com/it-glossary/predictive-analytics"&gt;predictive
+analytics&lt;/a&gt;. So
+in his/her life it might be not bad to know a bit about hype cycles -
+but do not care too much. And you should really have a look to the
+&lt;a href="https://www.youtube.com/watch?v=Fo0Ne2pYWW4"&gt;video&lt;/a&gt;, because it
+appears to be almost a lecture, which gives a nice introduction on
+'data science' in our Big Data world (be it a peak or not ...).&lt;/p&gt;
+&lt;p&gt;Peadar Coyle very nicely presented an interesting example how &lt;a href="http://nbviewer.ipython.org/format/slides/github/springcoil/Probabilistic_Programming_and_Rugby/blob/master/Bayesian_Rugby.ipynb#/"&gt;sports
+analytics&lt;/a&gt; -
+in this case &lt;a href="http://www.rbs6nations.com"&gt;6 Nations&lt;/a&gt; playing Rugby -
+can be done by applying bayesian statistical models with
+&lt;a href="https://github.com/pymc-devs/pymc"&gt;PyMC&lt;/a&gt;. Someone in the audience
+mentioned that it could be already worth switching to the successor
+&lt;a href="https://github.com/pymc-devs/pymc3"&gt;PyMC 3&lt;/a&gt; to perform Markow chain
+Monte Carlo fitting. Actually
+&lt;a href="http://nbviewer.ipython.org/github/aloctavodia/Doing_bayesian_data_analysis/blob/master/IPython/Kruschkes_Doing_Bayesian_Data_Analysis_in_PyMC3.ipynb"&gt;this&lt;/a&gt;
+notebook seems to be a good tutorial for learning or migration
+purposes.&lt;/p&gt;
+&lt;p&gt;The second presentation of Blue Yonder folks was an
+introduction to
+&lt;a href="https://spark.apache.org/docs/latest/api/python/index.html"&gt;PySpark&lt;/a&gt;
+DataFrame objects, which are created to make use of - for instance -
+columnar data stored on &lt;a href="http://hadoop.apache.org/"&gt;Hadoop&lt;/a&gt; HDFS
+clusters in &lt;a href="http://parquet.apache.org"&gt;Parquet&lt;/a&gt; format. It was
+concluded that such an API for distributed file access is too costly
+in terms of efficiency compared to NumPy arrays or Pandas dataframes,
+when data fits on one machine.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://albahnsen.com"&gt;Alejandro C. Bahnsen&lt;/a&gt; presented his work
+&lt;a href="https://github.com/albahnsen/CostSensitiveClassification"&gt;CostCla&lt;/a&gt;,
+which examplifies usage of scikit-learn classifications on financial
+topics like &lt;a href="http://nbviewer.ipython.org/github/albahnsen/CostSensitiveClassification/blob/master/doc/tutorials/tutorial_edcs_credit_scoring.ipynb"&gt;credit
+scoring&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Brian Carter (IBM Software Group) gave an overview on web text mining
+processes. In this field the &lt;a href="http://www.nltk.org"&gt;NLTK&lt;/a&gt; module seems
+to be the standard for language processing with Python.&lt;/p&gt;
+&lt;p&gt;When dealing with similarity of words like Miguel Fernando Cabrera (TrustYou) did with hotel reviews, &lt;a href="https://github.com/danielfrg/word2vec"&gt;word2vec&lt;/a&gt; has the metrices needed.&lt;/p&gt;
+&lt;p&gt;I didn't attend the tutorial sessions, so it will help to have a look
+at respective videos, if one wants to learn and understand better
+e.g. how interactive graphics e.g. within &lt;a href="http://ipython.org/notebook.html"&gt;IPython
+notebooks&lt;/a&gt; can be created with
+&lt;a href="http://bokeh.pydata.org"&gt;Bokeh&lt;/a&gt;, how
+&lt;a href="https://docs.docker.com"&gt;Docker&lt;/a&gt; could be seen in between tools like
+virtualenv and 'normal' virtual machines, and what one could use
+instead of
+&lt;a href="https://ipython.org/ipython-doc/dev/interactive/magics.html?highlight=timeit#magic-timeit"&gt;%timeit&lt;/a&gt;
+for code profiling.&lt;/p&gt;
+&lt;p&gt;Someone referred to the
+&lt;a href="https://amplab.cs.berkeley.edu/projects/velox"&gt;velox&lt;/a&gt; model server,
+and I noted also &lt;a href="https://github.com/spotify/luigi"&gt;Luigi&lt;/a&gt; for
+pipeline creation of batch jobs - if you remember the right context,
+talk or discussion, those were given then feel free to message me
+&lt;a href="https://twitter.com/RaPrism"&gt;@RaPrism&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- Local Variables: --&gt;
+
+&lt;!-- mode: rst --&gt;
+
+&lt;!-- End: --&gt;</summary><category term="python"></category><category term="data"></category><category term="berlin"></category><category term="pydata"></category></entry><entry><title>Trapattoni '98</title><link href="https://raprism.github.io/test-post.html" rel="alternate"></link><updated>2015-05-17T00:00:00+02:00</updated><author><name>prismv</name></author><id>tag:raprism.github.io,2015-05-17:test-post.html</id><summary type="html">&lt;p&gt;Es gibt im Moment in diese Mannschaft, oh, einige Spieler vergessen ihnen Profi was sie sind. Ich lese nicht sehr viele Zeitungen, aber ich habe gehört viele Situationen. Erstens: wir haben nicht offensiv gespielt. Es gibt keine deutsche Mannschaft spielt offensiv und die Name offensiv wie Bayern. Letzte Spiel hatten wir in Platz drei Spitzen: Elber, Jancka und dann Zickler. Wir müssen nicht vergessen Zickler. Zickler ist eine Spitzen mehr, Mehmet eh mehr Basler.&lt;/p&gt;
+&lt;p&gt;Ist klar diese Wörter, ist möglich verstehen, was ich hab gesagt? Danke. Offensiv, offensiv ist wie machen wir in Platz. Zweitens: ich habe erklärt mit diese zwei Spieler: nach Dortmund brauchen vielleicht Halbzeit Pause. Ich habe auch andere Mannschaften gesehen in Europa nach diese Mittwoch. Ich habe gesehen auch zwei Tage die Training. Ein Trainer ist nicht ein Idiot! Ein Trainer sei sehen was passieren in Platz.&lt;/p&gt;
+&lt;p&gt;In diese Spiel es waren zwei, drei diese Spieler waren schwach &lt;strong&gt;wie eine Flasche leer&lt;/strong&gt;! Haben Sie gesehen Mittwoch, welche Mannschaft hat gespielt Mittwoch? Hat gespielt Mehmet oder gespielt Basler oder hat gespielt Trapattoni? Diese Spieler beklagen mehr als sie spielen! Wissen Sie, warum die Italienmannschaften kaufen nicht diese Spieler? Weil wir haben gesehen viele Male solche Spiel! Haben gesagt sind nicht Spieler für die italienisch Meisters! Strunz!&lt;/p&gt;
+&lt;p&gt;Strunz ist zwei Jahre hier, hat gespielt 10 Spiele, ist immer verletzt! Was erlauben Strunz? Letzte Jahre Meister Geworden mit Hamann, eh, Nerlinger. Diese Spieler waren Spieler! Waren Meister geworden! Ist immer verletzt! Hat gespielt 25 Spiele in diese Mannschaft in diese Verein. Muß respektieren die andere Kollegen! haben viel nette kollegen! Stellen Sie die Kollegen die Frage! Haben keine Mut an Worten, aber ich weiß, was denken über diese Spieler.&lt;/p&gt;
+&lt;p&gt;Mussen zeigen jetzt, ich will, Samstag, diese Spieler müssen zeigen mich, seine Fans, müssen alleine die Spiel gewinnen. Muß allein die Spiel gewinnen! Ich bin müde jetzt Vater diese Spieler, eh der Verteidiger diese Spieler. Ich habe immer die Schuld über diese Spieler. Einer ist Mario, einer andere ist Mehmet! Strunz ich spreche nicht, hat gespielt nur 25 Prozent der Spiel. &lt;strong&gt;Ich habe fertig!&lt;/strong&gt; . . . wenn es gab Fragen, ich kann Worte wiederholen. . .&lt;/p&gt;
+&lt;p&gt;(Text source: &lt;a href="http://www.blindtextgenerator.de/"&gt;blindtextgenerator.de&lt;/a&gt;)&lt;/p&gt;</summary><category term="pelican"></category><category term="publishing"></category></entry></feed>
